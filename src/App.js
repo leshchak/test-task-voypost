@@ -1,8 +1,14 @@
+import { FirebaseAppProvider } from 'reactfire';
+
 import MainScreen from "./components/MainScreen";
+
+import firebaseConfig from './common/firebase';
 
 const App = () => {
   return (
-    <MainScreen />
+    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+      <MainScreen />
+    </FirebaseAppProvider>
   );
 }
 
